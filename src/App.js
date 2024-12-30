@@ -1,6 +1,6 @@
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="App-header">
@@ -11,16 +11,22 @@ function App() {
           This project was coded by{" "}
           <a
             href="https://github.com/sofia-pastor"
-            target="blank"
-            rel="nonreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             Sofia Pastor
           </a>{" "}
-          and is open-sourced.
+          and is{" "}
+          <a
+            href="https://github.com/sofia-pastor/dictionary-project"
+            target="_blank"
+            rel="noreferrer"
+          >
+            open-sourced.
+          </a>
+          .
         </p>
       </footer>
     </div>
   );
 }
-
-export default App;
