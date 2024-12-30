@@ -1,7 +1,4 @@
-import { useState } from "react";
-
 export default function Meaning(props) {
-  console.log(props.meaning);
   function example() {
     let example = props.meaning.example;
     if (example) {
@@ -24,7 +21,6 @@ export default function Meaning(props) {
     } else return null;
   }
 
-  const [meaningData, setMeaningData] = useState({ ready: false });
   return (
     <div className="Meaning">
       <h3>{props.meaning.partOfSpeech}</h3>
