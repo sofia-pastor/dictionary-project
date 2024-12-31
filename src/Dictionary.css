@@ -1,0 +1,37 @@
+.Dictionary form {
+  text-align: center;
+}
+
+.Dictionary .input-form {
+  width: 75%;
+  margin: 10px 30px 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(217, 189, 124);
+}
+
+.Dictionary .form-button {
+  width: 20%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(233, 146, 4);
+  color: antiquewhite;
+  border: 1px solid rgb(180, 113, 5);
+  box-shadow: 6px 5px 8px rgba(136, 84, 0, 0.6);
+}
+
+.Dictionary .form-button:hover {
+  transform: scale(1.05);
+  background-color: rgb(226, 139, 0);
+}
+
+.Dictionary section {
+  background-color: rgb(217, 189, 124);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px 10px;
+}
+
+.Dictionary h2 {
+  margin-left: 8px;
+}

@@ -4,11 +4,15 @@
   line-height: 1.5;
 }
 
-.Dictionary form {
-  text-align: center;
-}
-
 .App footer {
   margin-top: 30px;
   font-size: 12px;
+}
+
+.App footer a {
+  color: rgb(152, 94, 1);
+}
+
+.App footer a:hover {
+  color: rgb(233, 146, 4);
 }

@@ -28,16 +28,20 @@ export default function Meaning(props) {
   if (props.meaning) {
     return (
       <div className="Meaning">
-        <h3>{props.meaning.partOfSpeech}</h3>
-        <p>{props.meaning.definition}</p>
-        {synonym()}
-        {example()}
+        <section>
+          <h4>{props.meaning.partOfSpeech}</h4>
+          <p>{props.meaning.definition}</p>
+          {synonym()}
+          {example()}
+        </section>
       </div>
     );
   } else {
     return (
       <div>
-        <h4>Looking for the meaning of {props.word}...</h4>
+        <section>
+          <h4>Looking for the meaning of {props.word}...</h4>
+        </section>
       </div>
     );
   }

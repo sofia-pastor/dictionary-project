@@ -1,0 +1,9 @@
+body {
+  background-image: linear-gradient(
+      rgba(255, 161, 19, 0.3),
+      rgba(255, 161, 19, 0.3)
+    ),
+    url(./book-image.jpg);
+  background-position: initial;
+  background-size: cover;
+}
