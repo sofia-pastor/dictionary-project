@@ -27,7 +27,7 @@ export default function App() {
               target="_blank"
               rel="noreferrer"
             >
-              open-sourced.
+              open-sourced
             </a>
             .
           </p>

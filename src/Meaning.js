@@ -11,15 +11,21 @@ export default function Meaning(props) {
   }
 
   function synonym() {
-    let synonyms = props.meaning.synonyms;
-    if (synonyms) {
+    if (props.meaning.synonyms) {
       return (
-        <p>
-          <em>synonym: {synonyms}</em>
-        </p>
+        <div>
+          <p>Synonyms:</p>
+          <ul>
+            {props.meaning.synonyms.map(function (synonym, index) {
+              return <li key={index}>{synonym}</li>;
+            })}
+          </ul>
+        </div>
       );
     } else return null;
   }
+
+  console.log(props.meaning);
 
   return (
     <div className="Meaning">
