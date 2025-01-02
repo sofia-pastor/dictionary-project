@@ -35,8 +35,9 @@ export default function Dictionary() {
             className="input-form"
             onChange={handleKeywordInput}
           />
-          <input type="submit" className="form-button" />
+          <input type="submit" value={"Search"} className="form-button" />
         </form>
+        <p className="hint">i.e: hello, sun, program,...</p>
       </section>
       <Results results={results} />
     </div>

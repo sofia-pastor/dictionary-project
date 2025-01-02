@@ -2,19 +2,15 @@ export default function Meaning(props) {
   function example() {
     let example = props.meaning.example;
     if (example) {
-      return (
-        <p className="example">
-          <em>example: {props.meaning.example}</em>
-        </p>
-      );
+      return <p className="example">{props.meaning.example}</p>;
     } else return null;
   }
 
   function synonym() {
     if (props.meaning.synonyms) {
       return (
-        <div>
-          <p>Synonyms:</p>
+        <div className="synonyms-container">
+          <p className="synonym">Synonyms:</p>
           <ul>
             {props.meaning.synonyms.map(function (synonym, index) {
               return <li key={index}>{synonym}</li>;
@@ -31,8 +27,8 @@ export default function Meaning(props) {
         <section>
           <h4>{props.meaning.partOfSpeech}</h4>
           <p>{props.meaning.definition}</p>
-          {synonym()}
           {example()}
+          {synonym()}
         </section>
       </div>
     );
