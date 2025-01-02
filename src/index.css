@@ -4,6 +4,6 @@ body {
       rgba(255, 161, 19, 0.3)
     ),
     url(./book-image.jpg);
-  background-position: initial;
+  background-position: center;
   background-size: cover;
 }

@@ -2,11 +2,13 @@ import { useState } from "react";
 import axios from "axios";
 
 import Results from "./Results";
+import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary() {
   const [keyword, setKeyword] = useState(null);
   const [results, setResults] = useState(null);
+  const [photos, setPhotos] = useState(null);
 
   function handleResponse(response) {
     setResults(response.data);
@@ -19,6 +21,19 @@ export default function Dictionary() {
     const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
 
     axios.get(apiUrl).then(handleResponse);
+    getImg();
+  }
+
+  function handleImgResponse(response) {
+    console.log(response.data);
+    setPhotos(response.data.results);
+  }
+
+  function getImg() {
+    const imgApiKey = "MWykxzB0Qh71p7qxFsQcD8VqEJVRZGezR14417o4RPM";
+    const imgApiUrl = `https://api.unsplash.com/search/photos?query=${keyword}&client_id=${imgApiKey}`;
+
+    axios.get(imgApiUrl).then(handleImgResponse);
   }
 
   function handleKeywordInput(event) {
@@ -32,14 +47,16 @@ export default function Dictionary() {
           <input
             type="search"
             autoFocus
+            placeholder="i.e: hello, sun, program,..."
             className="input-form"
             onChange={handleKeywordInput}
           />
+
           <input type="submit" value={"Search"} className="form-button" />
         </form>
-        <p className="hint">i.e: hello, sun, program,...</p>
       </section>
       <Results results={results} />
+      <Photos photos={photos} />
     </div>
   );
 }
